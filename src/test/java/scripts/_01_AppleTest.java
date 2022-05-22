@@ -7,15 +7,15 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-public class _01_AppleTest {
+public class _01_AppleTest extends Base {
+    // WE EXTEND THE CLASS TO PARENT WHICH HAS BEFORE AND AFTER METHODS SO WE DONT NEED THOSE HERE
     //Declare your driver
-    WebDriver driver;
-
+//    WebDriver driver;
     // 1. Initial set up - before each test
-    @BeforeMethod
-    public void setup(){
-        driver = Driver.getDriver();
-    }
+//    @BeforeMethod
+//    public void setup(){
+//        driver = Driver.getDriver();
+//    }
 
     // 2. Validation of test - test
     @Test
@@ -46,10 +46,10 @@ public class _01_AppleTest {
     }
 
     // 3. Teardown actions - after each test
-    @AfterMethod
-    public void teardown(){
-        Driver.quitDriver();
-    }
+//    @AfterMethod
+//    public void teardown(){
+//        Driver.quitDriver();
+//    }
 
     // WE USED TO DO THIS WAY
     /*
@@ -69,6 +69,5 @@ public class _01_AppleTest {
         // 3. Teardown actions - after each test
         Driver.quitDriver();
     }
-
      */
 }

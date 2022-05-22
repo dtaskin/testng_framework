@@ -9,17 +9,19 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utilities.Driver;
 
-public class _02_TechGlobalTest {
+public class _02_TechGlobalTest extends Base {
     /*
     1. Go to "https://www.techglobalschool.com/apply-now"
     2. Validate the heading1 is displayed and the text for it is ="Application Form"
      */
-    WebDriver driver;
+//    WebDriver driver;
+
+    // WE EXTEND THE CLASS TO PARENT WHICH HAS BEFORE AND AFTER METHODS SO WE DONT NEED THOSE HERE
     //1. Set up
-    @BeforeMethod
-    public void setup(){
-        driver = Driver.getDriver();
-    }
+//    @BeforeMethod
+//    public void setup(){
+//        driver = Driver.getDriver();
+//    }
 
     //2. Validate test
     @Test
@@ -37,9 +39,9 @@ public class _02_TechGlobalTest {
 
 
     //3. Teardown
-
-    @AfterMethod
-    public void teardown(){
-        Driver.quitDriver();
-    }
+//
+//    @AfterMethod
+//    public void teardown(){
+//        Driver.quitDriver();
+//    }
 }

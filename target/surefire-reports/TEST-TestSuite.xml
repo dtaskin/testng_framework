@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="3" failures="1" name="scripts._01_AppleTest" time="4.725" errors="0" skipped="0">
+<testsuite tests="6" failures="1" name="TestSuite" time="3.989" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1+0"/>
@@ -12,7 +12,6 @@
     <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
     <property name="user.country" value="US"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
-    <property name="test" value="_01_AppleTest"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="user.dir" value="/Users/deniztaskin/IdeaProjects/testng_framework"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
@@ -42,7 +41,7 @@
     <property name="java.class.path" value="/opt/homebrew/Cellar/maven/3.8.5/libexec/boot/plexus-classworlds-2.6.0.jar"/>
     <property name="java.vm.specification.version" value="18"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher -Dtest=_01_AppleTest test"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
     <property name="java.home" value="/opt/homebrew/Cellar/openjdk/18.0.1/libexec/openjdk.jdk/Contents/Home"/>
     <property name="apple.awt.application.name" value="Launcher"/>
     <property name="user.language" value="en"/>
@@ -63,24 +62,38 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="scripts._01_AppleTest" name="X" time="0.003">
+  <testcase classname="scripts._03_EtsyTest" name="testEtsyLogo" time="0.674"/>
+  <testcase classname="scripts._03_EtsyTest" name="testEtsySearch" time="0.75"/>
+  <testcase classname="scripts._02_TechGlobalTest" name="testApplicationFormHeading" time="0.701"/>
+  <testcase classname="scripts._01_AppleTest" name="X" time="0.001">
     <failure message="Failure on purpose" type="java.lang.AssertionError">java.lang.AssertionError: Failure on purpose
 	at org.testng.Assert.fail(Assert.java:97)
 	at scripts._01_AppleTest.X(_01_AppleTest.java:45)
 </failure>
-    <system-out>Configuring TestNG with: org.apache.maven.surefire.testng.conf.TestNG652Configurator@44e81672
-</system-out>
-    <system-err>SLF4J: Failed to load class &quot;org.slf4j.impl.StaticLoggerBinder&quot;.
-SLF4J: Defaulting to no-operation (NOP) logger implementation
-SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
-Starting ChromeDriver 101.0.4951.41 (93c720db8323b3ec10d056025ab95c23a31997c9-refs/branch-heads/4951@{#904}) on port 9187
-Only local connections are allowed.
-Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
-ChromeDriver was started successfully.
-May 21, 2022 5:07:35 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+    <system-err>1653239238354	Marionette	INFO	Stopped listening on port 51397
+
+###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
+
+1653239238817	geckodriver	INFO	Listening on 127.0.0.1:30886
+1653239238824	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/bl/w8ldhy3j0tx_2549knp5zyc00000gn/T/rust_mozprofilesh8iRZ&quot;
+2022-05-22 13:07:19.063 plugin-container[2233:58408] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-22 13:07:19.063 plugin-container[2233:58408] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-22 13:07:19.065 plugin-container[2233:58408] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-22 13:07:19.065 plugin-container[2233:58408] nil host used in call to allowsAnyHTTPSCertificateForHost:
+2022-05-22 13:07:19.065 plugin-container[2233:58413] nil host used in call to allowsSpecificHTTPSCertificateForHost
+2022-05-22 13:07:19.065 plugin-container[2233:58413] nil host used in call to allowsAnyHTTPSCertificateForHost:
+1653239239068	Marionette	INFO	Marionette enabled
+UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
+console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at /var/folders/bl/w8ldhy3j0tx_2549knp5zyc00000gn/T/rust_mozprofilesh8iRZ/search.json.mozlz4&quot;, (void 0)))
+console.error: BackgroundUpdate: 
+  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... &quot;Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]&quot;  nsresult: &quot;0x80004001 (NS_ERROR_NOT_IMPLEMENTED)&quot;  location: &quot;JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241&quot;  data: no]
+1653239239733	Marionette	INFO	Listening on port 51603
+Read port: 51603
+1653239239761	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+May 22, 2022 1:07:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 </system-err>
   </testcase>
-  <testcase classname="scripts._01_AppleTest" name="testAppleTitle" time="2.38"/>
-  <testcase classname="scripts._01_AppleTest" name="testAppleURL" time="2.342"/>
+  <testcase classname="scripts._01_AppleTest" name="testAppleTitle" time="0.929"/>
+  <testcase classname="scripts._01_AppleTest" name="testAppleURL" time="0.934"/>
 </testsuite>
