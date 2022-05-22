@@ -24,7 +24,7 @@ public class _02_TechGlobalTest extends Base {
 //    }
 
     //2. Validate test
-    @Test
+    @Test(description = "TC123: Validate Application form Heading") // this is scenario
     public void testApplicationFormHeading(){
         driver.get("https://www.techglobalschool.com/apply-now");
 

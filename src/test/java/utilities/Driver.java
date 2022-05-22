@@ -1,8 +1,11 @@
 package utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.NotFoundException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.safari.SafariDriver;
 
 import java.util.concurrent.TimeUnit;
 
@@ -22,13 +25,47 @@ public class Driver {
             // Telling your system where your chrome driver is located
             //System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/selenium_intro/chromedriver");
 
-            WebDriverManager.chromedriver().setup(); // SETS UP YOUR CHROME DRIVER. YOU DONT NEED TO SYSTEM.SETPROPERTY ANYMORE
+            String browser = "chrome"; // define which browser you will run test in
 
-            // Create the object of the web browser that you are automating
-            driver = new ChromeDriver();
+            switch (browser){
+                case "chrome":
+                    WebDriverManager.chromedriver().setup();
+                    driver =new ChromeDriver();
+                    break;
+                case "firefox":
+                    WebDriverManager.firefoxdriver().setup();
+                    driver =new FirefoxDriver();
+                    break;
+                case "safari":
+                    WebDriverManager.getInstance(SafariDriver.class).setup();
+                    driver =new SafariDriver();
+                    break;
+                default:
+                    throw new NotFoundException("Browser IS NOT DEFINED properly");
+            }
             driver.manage().window().maximize();
             //waiting only that web element to be EXISTED
             driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+
+            //SAFARI
+//            WebDriverManager.getInstance(SafariDriver.class).setup(); // SETS UP YOUR CHROME DRIVER. YOU DONT NEED TO SYSTEM.SETPROPERTY ANYMORE
+//            driver = new SafariDriver();
+//
+//            //CHROME
+//            WebDriverManager.chromedriver().setup();
+//            driver = new ChromeDriver();
+//
+//            //FIREFOX
+//            WebDriverManager.firefoxdriver().setup();
+//            driver = new FirefoxDriver();
+
+
+            // Create the object of the web browser that you are automating
+//            driver = new SafariDriver();
+//            driver.manage().window().maximize();
+//            //waiting only that web element to be EXISTED
+//            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
         }
         return driver;
     }

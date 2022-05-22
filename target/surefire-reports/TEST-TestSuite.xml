@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="1" name="TestSuite" time="3.989" errors="0" skipped="0">
+<testsuite tests="6" failures="1" name="TestSuite" time="8.048" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="18.0.1+0"/>
@@ -62,38 +62,42 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
   </properties>
-  <testcase classname="scripts._03_EtsyTest" name="testEtsyLogo" time="0.674"/>
-  <testcase classname="scripts._03_EtsyTest" name="testEtsySearch" time="0.75"/>
-  <testcase classname="scripts._02_TechGlobalTest" name="testApplicationFormHeading" time="0.701"/>
-  <testcase classname="scripts._01_AppleTest" name="X" time="0.001">
-    <failure message="Failure on purpose" type="java.lang.AssertionError">java.lang.AssertionError: Failure on purpose
-	at org.testng.Assert.fail(Assert.java:97)
-	at scripts._01_AppleTest.X(_01_AppleTest.java:45)
+  <testcase classname="scripts._03_EtsyTest" name="testEtsyLogo" time="1.469"/>
+  <testcase classname="scripts._03_EtsyTest" name="testEtsySearch" time="1.452"/>
+  <testcase classname="scripts._03_EtsyTest" name="testEtsySearchResult" time="2.082">
+    <failure message="
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Denizs-MBP-2.fios-router.home&apos;, ip: &apos;fe80:0:0:0:1cf4:5706:8b78:ddb0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.5, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 21F79, safari:platformVersion: 12.4, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 94EEBA48-ED72-43B1-B970-96B2ED3DBA0C
+*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}" type="org.openqa.selenium.NoSuchFrameException">org.openqa.selenium.NoSuchFrameException: 
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;Denizs-MBP-2.fios-router.home&apos;, ip: &apos;fe80:0:0:0:1cf4:5706:8b78:ddb0%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;aarch64&apos;, os.version: &apos;12.4&apos;, java.version: &apos;18.0.1&apos;
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.5, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 21F79, safari:platformVersion: 12.4, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 94EEBA48-ED72-43B1-B970-96B2ED3DBA0C
+*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm&gt;span}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:56)
 </failure>
-    <system-err>1653239238354	Marionette	INFO	Stopped listening on port 51397
-
-###!!! [Parent][PImageBridgeParent] Error: RunMessage(msgname=PImageBridge::Msg_WillClose) Channel closing: too late to send/recv, messages will be lost
-
-1653239238817	geckodriver	INFO	Listening on 127.0.0.1:30886
-1653239238824	mozrunner::runner	INFO	Running command: &quot;/Applications/Firefox.app/Contents/MacOS/firefox-bin&quot; &quot;--marionette&quot; &quot;-foreground&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;/var/folders/bl/w8ldhy3j0tx_2549knp5zyc00000gn/T/rust_mozprofilesh8iRZ&quot;
-2022-05-22 13:07:19.063 plugin-container[2233:58408] nil host used in call to allowsSpecificHTTPSCertificateForHost
-2022-05-22 13:07:19.063 plugin-container[2233:58408] nil host used in call to allowsAnyHTTPSCertificateForHost:
-2022-05-22 13:07:19.065 plugin-container[2233:58408] nil host used in call to allowsSpecificHTTPSCertificateForHost
-2022-05-22 13:07:19.065 plugin-container[2233:58408] nil host used in call to allowsAnyHTTPSCertificateForHost:
-2022-05-22 13:07:19.065 plugin-container[2233:58413] nil host used in call to allowsSpecificHTTPSCertificateForHost
-2022-05-22 13:07:19.065 plugin-container[2233:58413] nil host used in call to allowsAnyHTTPSCertificateForHost:
-1653239239068	Marionette	INFO	Marionette enabled
-UNSUPPORTED (log once): POSSIBLE ISSUE: unit 1 GLD_TEXTURE_INDEX_2D is unloadable and bound to sampler type (Float) - using zero texture because texture unloadable
-console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at /var/folders/bl/w8ldhy3j0tx_2549knp5zyc00000gn/T/rust_mozprofilesh8iRZ/search.json.mozlz4&quot;, (void 0)))
-console.error: BackgroundUpdate: 
-  _reasonsToNotScheduleUpdates: Failed to check for Maintenance Service Registry Key: [Exception... &quot;Component returned failure code: 0x80004001 (NS_ERROR_NOT_IMPLEMENTED) [nsIUpdateProcessor.getServiceRegKeyExists]&quot;  nsresult: &quot;0x80004001 (NS_ERROR_NOT_IMPLEMENTED)&quot;  location: &quot;JS frame :: resource://gre/modules/BackgroundUpdate.jsm :: _reasonsToNotScheduleUpdates :: line 241&quot;  data: no]
-1653239239733	Marionette	INFO	Listening on port 51603
-Read port: 51603
-1653239239761	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-May 22, 2022 1:07:19 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+    <system-err>May 22, 2022 5:00:29 PM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
 </system-err>
   </testcase>
-  <testcase classname="scripts._01_AppleTest" name="testAppleTitle" time="0.929"/>
-  <testcase classname="scripts._01_AppleTest" name="testAppleURL" time="0.934"/>
+  <testcase classname="scripts._02_TechGlobalTest" name="testApplicationFormHeading" time="0.5"/>
+  <testcase classname="scripts._01_AppleTest" name="testAppleTitle" time="1.511"/>
+  <testcase classname="scripts._01_AppleTest" name="testAppleURL" time="1.034"/>
 </testsuite>

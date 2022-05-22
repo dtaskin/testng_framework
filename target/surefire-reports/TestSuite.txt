@@ -1,9 +1,27 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 35.506 sec <<< FAILURE!
-X(scripts._01_AppleTest)  Time elapsed: 0.001 sec  <<< FAILURE!
-java.lang.AssertionError: Failure on purpose
-	at org.testng.Assert.fail(Assert.java:97)
-	at scripts._01_AppleTest.X(_01_AppleTest.java:45)
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 32.141 sec <<< FAILURE!
+testEtsySearchResult(scripts._03_EtsyTest)  Time elapsed: 2.082 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchFrameException: 
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Denizs-MBP-2.fios-router.home', ip: 'fe80:0:0:0:1cf4:5706:8b78:ddb0%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.safari.SafariDriver
+Capabilities {acceptInsecureCerts: false, browserName: Safari, browserVersion: 15.5, javascriptEnabled: true, platform: MAC, platformName: MAC, safari:automaticInspection: false, safari:automaticProfiling: false, safari:diagnose: false, safari:platformBuildVersion: 21F79, safari:platformVersion: 12.4, safari:useSimulator: false, setWindowRect: true, strictFileInteractability: false, webkit:WebRTC: {DisableICECandidateFiltering: false, DisableInsecureMediaCapture: false}}
+Session ID: 94EEBA48-ED72-43B1-B970-96B2ED3DBA0C
+*** Element info: {Using=css selector, value=.wt-display-inline-flex-sm>span}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at scripts._03_EtsyTest.testEtsySearchResult(_03_EtsyTest.java:56)
 
