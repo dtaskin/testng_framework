@@ -30,15 +30,15 @@ public class Driver {
             switch (browser){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
-                    driver =new ChromeDriver();
+                    driver = new ChromeDriver();
                     break;
                 case "firefox":
                     WebDriverManager.firefoxdriver().setup();
-                    driver =new FirefoxDriver();
+                    driver = new FirefoxDriver();
                     break;
                 case "safari":
                     WebDriverManager.getInstance(SafariDriver.class).setup();
-                    driver =new SafariDriver();
+                    driver = new SafariDriver();
                     break;
                 default:
                     throw new NotFoundException("Browser IS NOT DEFINED properly");
