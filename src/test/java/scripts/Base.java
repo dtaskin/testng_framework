@@ -6,10 +6,7 @@ import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import pages.EtsySearchPage;
-import pages.GoogleSearchPage;
-import pages.GoogleSearchResultPage;
-import pages.TGApplicationPage;
+import pages.*;
 import utilities.Driver;
 
 import java.util.concurrent.TimeUnit;
@@ -23,6 +20,8 @@ public class Base {
     TGApplicationPage tgApplicationPage;
     GoogleSearchPage googleSearchPage;
     GoogleSearchResultPage googleSearchResultPage;
+    HeroAppPage heroAppPage;
+    FaceBookPage faceBookPage;
 
     @BeforeMethod
     public void setup(){
@@ -33,6 +32,8 @@ public class Base {
         tgApplicationPage = new TGApplicationPage(driver);
         googleSearchPage = new GoogleSearchPage(driver);
         googleSearchResultPage = new GoogleSearchResultPage(driver);
+        heroAppPage = new HeroAppPage(driver);
+        faceBookPage = new FaceBookPage(driver);
     }
 
     @AfterMethod
