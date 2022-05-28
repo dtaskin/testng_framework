@@ -28,13 +28,14 @@ public class _02_TechGlobalTest extends Base {
     public void testApplicationFormHeading(){
         driver.get("https://www.techglobalschool.com/apply-now");
 
-        WebElement heading = driver.findElement(By.xpath("//div[@id='comp-kh9s3kyz3']//span/span")); // OR //span[text()='Application Form']
+        // WE NO LONGER NEED THIS CODE BELOW BC WE USE tgApplicationBase object
+//        WebElement heading = driver.findElement(By.xpath("//div[@id='comp-kh9s3kyz3']//span/span")); // OR //span[text()='Application Form']
 
 //        String actualHeading = heading.getText();
 //        String expectedHeading = "Application Form";
 
-        Assert.assertTrue(heading.isDisplayed());
-        Assert.assertEquals(heading.getText(), "Application Form");
+        Assert.assertTrue(tgApplicationPage.heading.isDisplayed());
+        Assert.assertEquals(tgApplicationPage.heading.getText(), "Application Form");
     }
 
 
