@@ -19,5 +19,19 @@ public class FaceBookPage {
     public List<WebElement> genderRadioButtons;
 
 
+    /*
+    public class FaceBookPage {
+    public FaceBookPage(WebDriver driver){
+        PageFactory.initElements(driver, this);
+    }
+
+    @FindBy (css = "a[id^='u_0_2_']")
+    public WebElement createNewAccountLink;
+
+    @FindBy(css = "._8esa")
+    public List<WebElement> genderRadioButtons;
+     */
+
+
 
 }
