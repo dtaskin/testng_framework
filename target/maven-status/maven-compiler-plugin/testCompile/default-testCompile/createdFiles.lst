@@ -13,6 +13,7 @@ pages/EtsySearchPage.class
 utilities/Driver.class
 scripts/_01_AppleTest.class
 pages/HeroAppPage.class
+pages/EbayPage.class
 pages/GoogleSearchPage.class
 scripts/Base.class
 scripts/_05_CheckBoxTest.class

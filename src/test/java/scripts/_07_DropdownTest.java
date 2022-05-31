@@ -1,8 +1,5 @@
 package scripts;
 
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import utilities.DropdownHandler;
@@ -97,6 +94,18 @@ public class _07_DropdownTest extends Base{
 
     @Test(priority = 3, description = "TC242: Validate Ebay dropdown")
     public void testEbayDropdown(){
+        driver.get("https://www.ebay.com/");
+
+        DropdownHandler.selectOptionByVisibleText(ebayPage.allCategoriesDropdownMenuButton,"Art");
+        ebayPage.searchButton.click();
+
+        Assert.assertTrue(ebayPage.welcomeToEbayArtHeader.isDisplayed());
+        Assert.assertEquals(ebayPage.welcomeToEbayArtHeader.getText(),"Welcome to eBay Art");
+
+        Assert.assertTrue(ebayPage.findPrintsPaintingsPostersAndMoreHeader.isDisplayed());
+        Assert.assertEquals(ebayPage.findPrintsPaintingsPostersAndMoreHeader.getText(),"Find Prints, Paintings, Posters, and More.");
+
+
 
     }
 
