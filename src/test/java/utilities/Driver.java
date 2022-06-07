@@ -25,9 +25,10 @@ public class Driver {
             // Telling your system where your chrome driver is located
             //System.setProperty("webdriver.chrome.driver", "/Users/techglobal/IdeaProjects/selenium_intro/chromedriver");
 
-            String browser = "chrome"; // define which browser you will run test in
+            //The browser defined below with String is hard-coded
+            //String browser = "safari"; // define which browser you will run your test in
 
-            switch (browser){
+            switch (ConfigReader.getProperty("browser")){
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver();
@@ -41,35 +42,13 @@ public class Driver {
                     driver = new SafariDriver();
                     break;
                 default:
-                    throw new NotFoundException("Browser IS NOT DEFINED properly");
+                    throw new NotFoundException("Browser IS NOT DEFINED properly!!!");
             }
             driver.manage().window().maximize();
-            //waiting only that web element to be EXISTED
-            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-
-
-            //SAFARI
-//            WebDriverManager.getInstance(SafariDriver.class).setup(); // SETS UP YOUR CHROME DRIVER. YOU DONT NEED TO SYSTEM.SETPROPERTY ANYMORE
-//            driver = new SafariDriver();
-//
-//            //CHROME
-//            WebDriverManager.chromedriver().setup();
-//            driver = new ChromeDriver();
-//
-//            //FIREFOX
-//            WebDriverManager.firefoxdriver().setup();
-//            driver = new FirefoxDriver();
-
-
-            // Create the object of the web browser that you are automating
-//            driver = new SafariDriver();
-//            driver.manage().window().maximize();
-//            //waiting only that web element to be EXISTED
-//            driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+            driver.manage().timeouts().implicitlyWait(Long.parseLong(ConfigReader.getProperty("implicitWait")), TimeUnit.SECONDS);
         }
         return driver;
     }
-
 
     public static void quitDriver(){
         try{
