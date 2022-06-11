@@ -1,0 +1,52 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 26, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 318.955 sec <<< FAILURE! - in TestSuite
+testMainHeader(scripts._03_EtsyTest)  Time elapsed: 1.185 sec  <<< FAILURE!
+java.lang.AssertionError: The expected text IS NOT displayed expected [Shop Home Sales!] but found [Father's Day Gifts]
+	at scripts._03_EtsyTest.testMainHeader(_03_EtsyTest.java:97)
+
+testExpediaDropdowns(scripts._07_DropdownTest)  Time elapsed: 32.27 sec  <<< FAILURE!
+org.openqa.selenium.StaleElementReferenceException: 
+stale element reference: element is not attached to the page document
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Denizs-MBP-2.fios-router.home', ip: 'fe80:0:0:0:47e:62e6:2ad6:a696%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/bl/w8ldhy3j0tx...}, goog:chromeOptions: {debuggerAddress: localhost:64913}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 8e9d8ebdc0e47d8900e409b4bc2bec3b
+	at scripts._07_DropdownTest.testExpediaDropdowns(_07_DropdownTest.java:79)
+
+testEtsySignInModal(scripts._08_Alerts)  Time elapsed: 1.736 sec  <<< FAILURE!
+java.lang.AssertionError: expected [Sign in] but found [Sign in to continue]
+	at scripts._08_Alerts.testEtsySignInModal(_08_Alerts.java:26)
+
+testAmazonAddressModal(scripts._08_Alerts)  Time elapsed: 9.893 sec  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at scripts._08_Alerts.testAmazonAddressModal(_08_Alerts.java:148)
+
+testWindowHandle2(scripts._10_WindowHandles)  Time elapsed: 60.687 sec  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"css selector","selector":"#content h3"}
+  (Session info: chrome=102.0.5005.61)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Denizs-MBP-2.fios-router.home', ip: 'fe80:0:0:0:47e:62e6:2ad6:a696%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/bl/w8ldhy3j0tx...}, goog:chromeOptions: {debuggerAddress: localhost:49770}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: db36aec95acdc48c110e422215e5e37b
+*** Element info: {Using=css selector, value=#content h3}
+	at scripts._10_WindowHandles.testWindowHandle2(_10_WindowHandles.java:58)
+
+testFileDownload(scripts._11_FileUpload)  Time elapsed: 0.003 sec  <<< FAILURE!
+org.openqa.selenium.InvalidArgumentException: 
+invalid argument
+  (Session info: chrome=102.0.5005.61)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'Denizs-MBP-2.fios-router.home', ip: 'fe80:0:0:0:47e:62e6:2ad6:a696%en0', os.name: 'Mac OS X', os.arch: 'aarch64', os.version: '12.4', java.version: '18.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.61, chrome: {chromedriverVersion: 102.0.5005.61 (0e59bcc00cc4..., userDataDir: /var/folders/bl/w8ldhy3j0tx...}, goog:chromeOptions: {debuggerAddress: localhost:50145}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cd316e1e45e572f8934f9bd92ad88d38
+	at scripts._11_FileUpload.testFileDownload(_11_FileUpload.java:34)
+
