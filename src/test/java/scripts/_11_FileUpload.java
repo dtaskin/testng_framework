@@ -26,11 +26,20 @@ public class _11_FileUpload extends Base{
 
     }
 
-    /*
-
+  /*
+    Go to http://the-internet.herokuapp.com/
+    Click on “File Download” link
+    Click on “myFileTech2.xls” link
+    Validate “myFileTech2.xls” file is downloaded in your “Downloads” folder
      */
+
     @Test(priority = 2, description = "File download")
     public void testFileDownload(){
-        driver.get("");
+        driver.get("http://the-internet.herokuapp.com/");
+
+        heroAppPage.clickOnLink("File Download");
+
+        heroAppPage.downloadFileLink.click();
+        Waiter.pause(2);
     }
 }

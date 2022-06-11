@@ -40,10 +40,10 @@ public class HeroAppPage {
     public WebElement clickHereLink;
 
     @FindBy(css = "#content h3")
-    public WebElement newWindowH3;
+    public WebElement windowsH3;
 
     @FindBy(xpath = "//h3")
-    public WebElement windowsH3;
+    public WebElement newWindowH3;
 
     @FindBy(id = "file-upload")
     public WebElement chooseFileInputBox;
@@ -57,8 +57,8 @@ public class HeroAppPage {
     @FindBy(id = "uploaded-files")
     public WebElement uploadedFileText;
 
-    @FindBy(linkText = "myFileHellow.txt")
-    public WebElement myFileHellow;
+    @FindBy(linkText = "myFileTech2.xls")
+    public WebElement downloadFileLink;
 
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
