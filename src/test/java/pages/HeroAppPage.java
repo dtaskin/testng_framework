@@ -60,6 +60,11 @@ public class HeroAppPage {
     @FindBy(linkText = "myFileTech2.xls")
     public WebElement downloadFileLink;
 
+    @FindBy(css = "#table1 th")
+    public List<WebElement> table1Headers;
+
+
+
     public void clickOnLink(String linkText){
         for (WebElement link : links) {
             if(link.getText().equals(linkText)){
