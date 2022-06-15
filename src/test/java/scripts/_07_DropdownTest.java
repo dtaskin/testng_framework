@@ -105,8 +105,6 @@ public class _07_DropdownTest extends Base{
         Assert.assertTrue(ebayPage.findPrintsPaintingsPostersAndMoreHeader.isDisplayed());
         Assert.assertEquals(ebayPage.findPrintsPaintingsPostersAndMoreHeader.getText(),"Find Prints, Paintings, Posters, and More.");
 
-
-
     }
 
 }
