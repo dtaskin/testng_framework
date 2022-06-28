@@ -2,8 +2,8 @@ package scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.DropdownHandler;
-import utilities.Waiter;
+import utils.DropdownHandler;
+import utils.Waiter;
 
 public class _07_DropdownTest extends Base{
     /*

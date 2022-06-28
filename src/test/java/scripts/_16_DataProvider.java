@@ -5,7 +5,7 @@ import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import utilities.Waiter;
+import utils.Waiter;
 
 public class _16_DataProvider extends Base{
 

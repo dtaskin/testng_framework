@@ -1,11 +1,9 @@
 package scripts;
 
-import org.openqa.selenium.Alert;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import pages.AmazonHomePage;
-import utilities.AlertHandler;
-import utilities.Waiter;
+import utils.AlertHandler;
+import utils.Waiter;
 
 public class _08_Alerts extends Base{
     /*

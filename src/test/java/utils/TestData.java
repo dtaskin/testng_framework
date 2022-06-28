@@ -1,4 +1,4 @@
-package utilities;
+package utils;
 
 public class TestData {
     public static final String username = "kaly123";

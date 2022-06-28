@@ -1,7 +1,7 @@
 package testng_learning;
 
 import org.testng.annotations.Test;
-import utilities.Waiter;
+import utils.Waiter;
 
 public class _07A_Parallel {
     @Test(priority = 1)

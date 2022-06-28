@@ -3,7 +3,7 @@ package scripts;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.Waiter;
+import utils.Waiter;
 
 public class _04_GoogleSearchTest extends Base{
 

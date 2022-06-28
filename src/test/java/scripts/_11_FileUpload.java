@@ -2,7 +2,7 @@ package scripts;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-import utilities.Waiter;
+import utils.Waiter;
 
 public class _11_FileUpload extends Base{
 

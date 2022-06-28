@@ -2,8 +2,8 @@ package testng_learning;
 
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
-import utilities.ConfigReader;
-import utilities.TestData;
+import utils.ConfigReader;
+import utils.TestData;
 
 public class _06_Parameters {
 
